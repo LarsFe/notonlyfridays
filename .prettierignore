@@ -1,7 +1,9 @@
 *.css
+*.md
 *.json
+.cache
+.next
+.prettierrc
 .vscode
 dist
 node_modules
-.prettierrc
-*.md

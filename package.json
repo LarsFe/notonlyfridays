@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "husky": "husky install",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@types/node": "20.1.2",
@@ -27,6 +29,8 @@
   "devDependencies": {
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "2.8.8"
   }
 }

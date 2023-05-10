@@ -14,8 +14,16 @@ Npm strictly manages dependency usage. Run the following command to install all 
 npm install
 ```
 
+## Installing husky
+To make use of pre-commit hooks and linting before committing run the following code:
+
+```bash
+npm run husky
+```
+
 ## Check your IDE, especially the plugins
 For syntax error highlighting install the following plugins:
+
 - ESLint
 - Prettier - Code formatter
 
