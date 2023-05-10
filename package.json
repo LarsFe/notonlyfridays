@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@types/node": "20.1.2",
@@ -18,5 +19,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
+  },
+  "engines": {
+    "npm": ">=8.15.0",
+    "node": ">=16.17.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.8.8"
   }
 }
