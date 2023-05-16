@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import Footer from '../components/footer/footer';
-import Header from '../components/header/header';
+import FooterComponent from '../components/footer/FooterComponent';
+import HeaderComponent from '../components/header/HeaderComponent';
 import '../globals.scss';
 import { Roboto } from 'next/font/google';
 
@@ -45,9 +45,9 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={roboto.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
+          <HeaderComponent />
           {children}
-          <Footer />
+          <FooterComponent />
         </NextIntlClientProvider>
       </body>
     </html>

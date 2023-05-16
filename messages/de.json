@@ -4,5 +4,8 @@
   },
   "About": {
     "title": "Über Uns"
+  },
+  "Search": {
+    "label": "Suchen"
   }
 }
