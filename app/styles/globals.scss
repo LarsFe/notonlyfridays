@@ -1,0 +1,45 @@
+@import 'modules/breakpoints.module.scss';
+@import 'modules/max-width.module.scss';
+
+:root {
+  --max-width: 1920px;
+  --body-distance-desktop: 50px;
+  --body-distance-tablet: 30px;
+  --body-distance-smartphone: 10px;
+
+  --light: 250, 250, 250; // #fafafa
+  --dark: 60, 60, 60; // #3c3c3c
+  --highlight: 10, 150, 0; // #0a9600
+
+  --border-alpha: .15;
+  --border-color: rgba(var(--dark), var(--border-alpha));
+
+  --header-height-desktop: 80px;
+  --main-height-desktop: calc(100vh - var(--header-height-desktop));
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--dark);
+  background: var(--light);
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+main {
+  @include max-width;
+  height: var(--main-height-desktop);
+}

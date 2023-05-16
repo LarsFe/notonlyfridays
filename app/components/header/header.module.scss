@@ -1,4 +1,17 @@
+@import '../../styles/modules/breakpoints.module.scss';
+@import '../../styles/modules/border.module.scss';
+@import '../../styles/modules/max-width.module.scss';
+
 .header {
-  min-height: 50px;
-  padding: 10px;
+  @include border-bottom;
+  height: var(--header-height-desktop);
+}
+
+.header__inner {
+  @include max-width;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  justify-content: space-between;
 }

@@ -1,6 +1,17 @@
+@import '../../styles/modules/breakpoints.module.scss';
+@import '../../styles/modules/border.module.scss';
+@import '../../styles/modules/max-width.module.scss';
+@import '../../styles/modules/z-index.module.scss';
+
 .footer {
-  background: gray;
-  color: white;
-  height: 100px;
-  padding: 10px;
+  @include border-top;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: z('footer');
+}
+
+.footer__inner {
+  @include max-width;
 }

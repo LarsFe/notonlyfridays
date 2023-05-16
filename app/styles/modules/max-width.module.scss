@@ -1,0 +1,12 @@
+@mixin max-width {
+  max-width: var(--max-width);
+  padding: 0 var(--body-distance-smartphone);
+
+  @include sm-breakpoint {
+    padding: 0 var(--body-distance-tablet);
+  };
+
+  @include md-breakpoint {
+    padding: 0 var(--body-distance-desktop);
+  };
+}

@@ -1,0 +1,11 @@
+@mixin border-bottom {
+  border-bottom: 1px solid var(--border-color);
+};
+
+@mixin border-top {
+  border-top: 1px solid var(--border-color);
+};
+
+@mixin border-all {
+  border: 1px solid var(--border-color);
+};

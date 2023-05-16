@@ -1,10 +1,14 @@
 import { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
+
 import { notFound } from 'next/navigation';
+
+import { Roboto } from 'next/font/google';
+
 import FooterComponent from '../components/footer/FooterComponent';
 import HeaderComponent from '../components/header/HeaderComponent';
-import '../globals.scss';
-import { Roboto } from 'next/font/google';
+
+import '../styles/globals.scss';
 
 type LocaleLayoutProps = {
   children: ReactNode;
