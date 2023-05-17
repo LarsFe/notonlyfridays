@@ -3,9 +3,6 @@
 
 :root {
   --max-width: 1920px;
-  --body-distance-desktop: 50px;
-  --body-distance-tablet: 30px;
-  --body-distance-smartphone: 10px;
 
   --padding-xs: 4px;
   --padding-s: 8px;
@@ -13,7 +10,11 @@
   --padding-l: 32px;
   --padding-xl: 64px;
 
-  --light: 250, 250, 250; // #fafafa
+  --body-distance-desktop: var(--padding-xl);
+  --body-distance-tablet: var(--padding-l);
+  --body-distance-smartphone: var(--padding-s);
+
+  --light: 255, 255, 255; // #ffffff
   --dark: 60, 60, 60; // #3c3c3c
   --highlight: 10, 150, 0; // #0a9600
 
@@ -21,7 +22,6 @@
   --border-color: rgba(var(--dark), var(--border-alpha));
 
   --header-height-desktop: 80px;
-  --main-height-desktop: calc(100vh - var(--header-height-desktop));
 }
 
 *, *:before, *:after {
@@ -57,5 +57,9 @@ ul {
 
 main {
   @include max-width;
-  height: var(--main-height-desktop);
+  height: 100vh; // for testing purpose only!
+  padding: {
+    top: var(--padding-m);
+    bottom: var(--padding-m);
+  }
 }

@@ -7,7 +7,10 @@
 .category-collection {
   @include border-bottom;
   @include font-size(12px);
-  padding: 20px 0;
+  background: rgb(var(--light));
+  padding: var(--padding-m) 0;
+  position: sticky;
+  top: var(--header-height-desktop);
 
   &__list {
     @include max-width;

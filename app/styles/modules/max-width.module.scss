@@ -3,10 +3,16 @@
   padding: 0 var(--body-distance-smartphone);
 
   @include sm-breakpoint {
-    padding: 0 var(--body-distance-tablet);
+    padding: {
+      left: var(--body-distance-tablet);
+      right: var(--body-distance-tablet);
+    }
   };
 
   @include md-breakpoint {
-    padding: 0 var(--body-distance-desktop);
+    padding: {
+      left: var(--body-distance-desktop);
+      right: var(--body-distance-desktop);
+    }
   };
 }
