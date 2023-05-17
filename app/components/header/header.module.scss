@@ -1,6 +1,7 @@
 @import '../../styles/modules/breakpoints.module.scss';
 @import '../../styles/modules/border.module.scss';
 @import '../../styles/modules/max-width.module.scss';
+@import '../../styles/modules/font.module.scss';
 
 .header {
   @include border-bottom;
@@ -8,6 +9,7 @@
 }
 
 .header__inner {
+  @include font-size(14px);
   @include max-width;
   align-items: center;
   display: flex;

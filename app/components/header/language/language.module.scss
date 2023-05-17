@@ -1,0 +1,12 @@
+.language-switch {
+  align-items: center;
+  display: flex;
+
+  img.is-header {
+    padding: 10px;
+  }
+
+  &__copy {
+    margin-left: 10px;
+  }
+}

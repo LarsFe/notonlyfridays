@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { Roboto } from 'next/font/google';
 
 import FooterComponent from '../components/footer/FooterComponent';
+import CategoryComponent from '../components/categrories/CategoryComponent';
 import HeaderComponent from '../components/header/HeaderComponent';
 
 import '../styles/globals.scss';
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
       <body className={roboto.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <HeaderComponent />
+          <CategoryComponent />
           {children}
           <FooterComponent />
         </NextIntlClientProvider>

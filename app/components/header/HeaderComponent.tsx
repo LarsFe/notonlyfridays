@@ -1,6 +1,7 @@
 import styles from './header.module.scss';
 import Brand from './brand/BrandComponent';
 import SearchComponent from './search/SearchComponent';
+import LanguageComponent from './language/LanguageComponent';
 
 export default function HeaderComponent() {
   return (
@@ -8,7 +9,7 @@ export default function HeaderComponent() {
       <div className={styles.header__inner}>
         <Brand />
         <SearchComponent />
-        <div></div>
+        <LanguageComponent isCopyVisible={false} />
       </div>
     </header>
   );

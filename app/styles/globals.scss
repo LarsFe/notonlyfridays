@@ -7,6 +7,12 @@
   --body-distance-tablet: 30px;
   --body-distance-smartphone: 10px;
 
+  --padding-xs: 4px;
+  --padding-s: 8px;
+  --padding-m: 16px;
+  --padding-l: 32px;
+  --padding-xl: 64px;
+
   --light: 250, 250, 250; // #fafafa
   --dark: 60, 60, 60; // #3c3c3c
   --highlight: 10, 150, 0; // #0a9600
@@ -20,8 +26,8 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -37,6 +43,16 @@ body {
 a {
   color: var(--highlight);
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 main {
