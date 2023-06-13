@@ -4,5 +4,8 @@
   },
   "About": {
     "title": "About"
+  },
+  "Search": {
+    "label": "Search"
   }
 }
