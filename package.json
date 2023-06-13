@@ -4,21 +4,24 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
     "husky": "husky install",
     "pre-commit": "lint-staged"
   },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "dependencies": {
-    "@types/node": "20.1.2",
+    "@prisma/client": "4.15.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "next": "13.4.1",
-    "next-intl": "^2.15.0-beta.3",
+    "next-intl": "2.15.0-beta.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
@@ -28,11 +31,14 @@
     "node": ">=16.17.0"
   },
   "devDependencies": {
+    "@types/node": "20.3.1",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.2",
     "prettier": "2.8.8",
-    "sass": "^1.62.1"
+    "prisma": "4.15.0",
+    "sass": "1.62.1",
+    "ts-node": "10.9.1"
   }
 }
