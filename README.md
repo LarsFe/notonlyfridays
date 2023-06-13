@@ -21,6 +21,68 @@ To make use of pre-commit hooks and linting before committing run the following 
 npm run husky
 ```
 
+## Initialize Prisma
+
+Prisma is an ORM (Object-Relational Mapping) tool that allows you to work with databases in a more convenient way. Initialize Prisma by running the following command in your project's root directory:
+
+```bash
+npx prisma init
+```
+
+This will generate a prisma folder with the necessary files and configurations.
+
+## Start the Docker containers
+
+Run the following command in your terminal to start the Docker containers defined in the `docker-compose.yml` file:
+
+```bash
+docker-compose up -d
+```
+
+## Migrate the database
+
+Apply the database migrations defined in the Prisma schema by running the following command:
+
+```bash
+npx prisma migrate dev --preview-feature
+```
+
+## Start the Next.js development server
+
+Launch the Next.js development server by running the following command:
+
+```bash
+npm run dev
+```
+
+This command will start your Next.js application, and you should be able to access it at `http://localhost:3000`.
+
+## Prisma Studio
+
+Prisma provides a visual database editor called Prisma Studio. To use Prisma Studio run the following command in your project's root directory:
+
+```bash
+npx prisma studio
+```
+
+This will open Prisma Studio in your browser, where you can view and edit your database entries interactively.
+
+## Seed your database
+
+Provide basic data for validating and using your application in a development environment. This is particularly useful if you are using Prisma Migrate, which sometimes requires resetting your development database. Use this command:
+
+```bash
+npx prisma db seed
+```
+
+If you already seeded your database another seed won't overwrite given data. Instead use the following command:
+
+```bash
+npx prisma migrate reset
+```
+
+It will reset as well re-seed.
+
 ## Check your IDE, especially the plugins
 For syntax error highlighting install the following plugins:
 
