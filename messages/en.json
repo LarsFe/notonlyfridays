@@ -1,11 +1,17 @@
 {
-  "Home": {
-    "title": "Hello world!"
-  },
   "About": {
     "title": "About"
   },
   "Search": {
     "label": "Search"
+  },
+  "Categories": {
+    "toys": "Toys",
+    "clothing": "Clothing",
+    "unpackaged": "Unpackaged",
+    "jewelry": "Jewelry",
+    "second_hand": "Second Hand",
+    "furniture": "Furniture",
+    "travel": "Travel"
   }
 }

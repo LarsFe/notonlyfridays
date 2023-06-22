@@ -1,11 +1,17 @@
 {
-  "Home": {
-    "title": "Hallo Welt!"
-  },
   "About": {
     "title": "Über Uns"
   },
   "Search": {
     "label": "Suchen"
+  },
+  "Categories": {
+    "toys": "Spielwaren",
+    "clothing": "Kleidung",
+    "unpackaged": "Unverpackt",
+    "jewelry": "Juweliere",
+    "second_hand": "Second Hand",
+    "furniture": "Möbel",
+    "travel": "Reisen"
   }
 }
