@@ -11,10 +11,46 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
+  id        Int      @id @default(autoincrement())
   name      String
-  email     String   @unique
+  email     String   @unique @db.VarChar(254)
   role      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id                Int       @id @default(autoincrement())
+  name              String    @unique
+  short_description String
+  description       String
+  logo_url          String
+  url               String
+  category          Category? @relation(fields: [categoryId], references: [id])
+  categoryId        Int?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  addresses         Address[]
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  i18n_slug String    @unique
+  priority  Int
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  companies Company[]
+}
+
+model Address {
+  id           Int      @id @default(autoincrement())
+  street       String
+  house_number String   @db.VarChar(10)
+  zip_code     String   @db.VarChar(10)
+  city         String   @db.VarChar(100)
+  country      String   @db.VarChar(100)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  company      Company? @relation(fields: [companyId], references: [id])
+  companyId    Int?
 }
