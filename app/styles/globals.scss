@@ -16,7 +16,7 @@
 
   --light: 255, 255, 255; // #ffffff
   --dark: 60, 60, 60; // #3c3c3c
-  --highlight: 10, 150, 0; // #0a9600
+  --highlight: 9, 138, 0; // #098a00
 
   --border-alpha: .15;
   --border-color: rgba(var(--dark), var(--border-alpha));
@@ -36,12 +36,12 @@ html {
 }
 
 body {
-  color: var(--dark);
-  background: var(--light);
+  color: rgb(var(--dark));
+  background: rgb(var(--light));
 }
 
 a {
-  color: var(--highlight);
+  color: rgb(var(--highlight));
   text-decoration: none;
 }
 
