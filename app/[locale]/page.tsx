@@ -1,15 +1,9 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
-import ListUsersComponent from '../components/users/ListUsersComponent';
+import ListCompaniesComponent from '../components/companies/ListCompaniesComponent';
 
 export default function Home() {
-  const t = useTranslations('Home');
-
   return (
     <main>
-      {t('title')}
-      <ListUsersComponent />
+      <ListCompaniesComponent />
     </main>
   );
 }
