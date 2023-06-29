@@ -3,12 +3,12 @@ import { NextResponse } from 'next/server';
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: number } }
+  { params }: { params: { slug: string } }
 ) {
-  const id = params.id;
+  const i18n_slug = params.slug;
   const category = await prisma.category.findUnique({
     where: {
-      id,
+      i18n_slug,
     },
   });
 
@@ -21,13 +21,13 @@ export async function GET(
 
 export async function PATCH(
   request: Request,
-  { params }: { params: { id: number } }
+  { params }: { params: { slug: string } }
 ) {
-  const id = params.id;
+  const i18n_slug = params.slug;
   let json = await request.json();
 
   const updated_category = await prisma.category.update({
-    where: { id },
+    where: { i18n_slug },
     data: json,
   });
 
@@ -40,12 +40,12 @@ export async function PATCH(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: number } }
+  { params }: { params: { slug: string } }
 ) {
   try {
-    const id = params.id;
+    const i18n_slug = params.slug;
     await prisma.category.delete({
-      where: { id },
+      where: { i18n_slug },
     });
 
     return new NextResponse(null, { status: 204 });
