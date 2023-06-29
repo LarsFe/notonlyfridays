@@ -4,14 +4,17 @@ import styles from './categories.module.scss';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Category } from '@prisma/client';
-import React, { use } from 'react';
 
-const getCategories = () =>
-  fetch(`http://localhost:3000/api/categories`).then((res) => res.json());
+const getCategories = async (): Promise<Category[]> => {
+  const data = await fetch('http://localhost:3000/api/categories');
+  const categories = await data.json();
 
-export default function CategoryComponent() {
+  return categories;
+};
+
+export default async function CategoryComponent() {
   const t = useTranslations('Categories');
-  const categories = use<Category[]>(getCategories());
+  const categories = await getCategories();
 
   return (
     <div className={styles['category-collection']}>

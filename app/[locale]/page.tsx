@@ -1,9 +1,9 @@
-import ListCompaniesComponent from '../components/companies/ListCompaniesComponent';
+import CompanyListComponent from '../components/company/company-list/CompanyListComponent';
 
 export default function Home() {
   return (
     <main>
-      <ListCompaniesComponent />
+      <CompanyListComponent />
     </main>
   );
 }
