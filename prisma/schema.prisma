@@ -21,7 +21,8 @@ model User {
 
 model Company {
   id                Int       @id @default(autoincrement())
-  name              String    @unique
+  name              String
+  slug              String    @unique
   short_description String
   description       String
   logo_url          String

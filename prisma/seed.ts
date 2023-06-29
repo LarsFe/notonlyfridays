@@ -48,6 +48,7 @@ async function seed() {
     data: [
       {
         name: 'Bemaya',
+        slug: 'bemaya',
         short_description:
           'Bemaya bietet dir alles, was du für einen tollen Kindergeburtstag oder eine Teenager-Geburtstagsfeier brauchst.',
         description:
@@ -58,16 +59,18 @@ async function seed() {
       },
       {
         name: 'Homeday',
+        slug: 'Homeday',
         short_description:
-          'Bemaya bietet dir alles, was du für einen tollen Kindergeburtstag oder eine Teenager-Geburtstagsfeier brauchst.',
+          'Warum mit Homeday verkaufen? ➤ Voller Service ✓ Erfahrene Makler vor Ort ✓ Kostenlose Immobilienbewertung ✓ Verkaufserfolg ✓',
         description:
-          'Bemaya bietet dir alles, was du für einen tollen Kindergeburtstag oder eine Teenager-Geburtstagsfeier brauchst.',
+          'Warum mit Homeday verkaufen? ➤ Voller Service ✓ Erfahrene Makler vor Ort ✓ Kostenlose Immobilienbewertung ✓ Verkaufserfolg ✓',
         logo_url: 'https://robohash.org/homeday?set=set2&size=180x180',
         url: 'https://homeday.de',
         categoryId: 1,
       },
       {
         name: 'Tillhub',
+        slug: 'tillhub',
         short_description:
           'Kassensysteme für Einzelhandel, Dienstleistung & Gastronomie ✅ 100% rechtskonform ✅ DATEV-Export ✅ Kinderleichte Bedienung - Jetzt Online-Demo anfordern!',
         description:
