@@ -1,11 +1,11 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { Address, Company } from '@prisma/client';
+import { Address, Company as CompanyModel } from '@prisma/client';
 import CompanyDetailComponent from '@/app/components/company/company-detail/CompanyDetailComponent';
 import CompanyAddressComponent from '@/app/components/company/company-address/CompanyAddressComponent';
 
-interface CompanyWithAddresses extends Company {
+interface CompanyWithAddresses extends CompanyModel {
   addresses: Address[];
 }
 
@@ -18,7 +18,7 @@ const getCompany = async (slug: string): Promise<CompanyWithAddresses> => {
   return company;
 };
 
-export default async function CompanyDetail() {
+export default async function Company() {
   const params = useParams();
   const company = await getCompany(params.slug);
 
