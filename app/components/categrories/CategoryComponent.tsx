@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './categories.module.scss';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Category } from '@prisma/client';
@@ -21,18 +22,20 @@ export default async function CategoryComponent() {
       <ul className={styles['category-collection__list']}>
         {categories.map((category) => (
           <li className={styles['category-collection__item']} key={category.id}>
-            <Image
-              src={`https://robohash.org/${
-                category.i18n_slug
-              }?set=set2&size=${40}x${40}`}
-              alt={t(category.i18n_slug)}
-              width={40}
-              height={40}
-              priority
-            />
-            <span className={styles['category-collection__category']}>
-              {t(category.i18n_slug)}
-            </span>
+            <Link href={`/${category.i18n_slug}`}>
+              <Image
+                src={`https://robohash.org/${
+                  category.i18n_slug
+                }?set=set2&size=${40}x${40}`}
+                alt={t(category.i18n_slug)}
+                width={40}
+                height={40}
+                priority
+              />
+              <span className={styles['category-collection__category']}>
+                {t(category.i18n_slug)}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>
