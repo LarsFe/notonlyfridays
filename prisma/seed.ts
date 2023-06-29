@@ -59,7 +59,7 @@ async function seed() {
       },
       {
         name: 'Homeday',
-        slug: 'Homeday',
+        slug: 'homeday',
         short_description:
           'Warum mit Homeday verkaufen? ➤ Voller Service ✓ Erfahrene Makler vor Ort ✓ Kostenlose Immobilienbewertung ✓ Verkaufserfolg ✓',
         description:
